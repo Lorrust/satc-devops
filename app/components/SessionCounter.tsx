@@ -6,10 +6,12 @@ interface SessionCounterProps {
 
 export function SessionCounter({ count }: SessionCounterProps) {
   return (
-    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-      <span className="inline-block size-2 rounded-full bg-[#818cf8]/60" />
-      <span>
-        {count} {count === 1 ? "session" : "sessions"} completed
+    <div className="flex flex-col items-center gap-1">
+      <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-muted-foreground/70">
+        Sessions
+      </span>
+      <span className="text-2xl font-light text-[#818cf8]/80 font-mono tabular-nums">
+        {count}
       </span>
     </div>
   );

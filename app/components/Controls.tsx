@@ -17,15 +17,15 @@ export function Controls({
   onReset,
 }: ControlsProps) {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-3">
       {isRunning ? (
         <Button
           variant="outline"
           size="lg"
           onClick={onPause}
-          className="gap-2 border-border/40 bg-secondary/50 hover:bg-secondary/80 hover:shadow-[0_0_16px_rgba(99,102,241,0.15)] transition-all duration-300 cursor-pointer"
+          className="gap-2 h-12 px-6 border-border/40 bg-secondary/50 hover:bg-secondary/80 hover:shadow-[0_0_16px_rgba(99,102,241,0.15)] active:scale-[0.97] transition-all duration-300 cursor-pointer"
         >
-          <Pause className="size-4" />
+          <Pause className="size-5" />
           Pause
         </Button>
       ) : (
@@ -33,9 +33,9 @@ export function Controls({
           variant="outline"
           size="lg"
           onClick={onStart}
-          className="gap-2 border-[#818cf8]/30 bg-[#818cf8]/10 text-[#818cf8] hover:bg-[#818cf8]/20 hover:shadow-[0_0_16px_rgba(99,102,241,0.25)] transition-all duration-300 cursor-pointer"
+          className="gap-2 h-12 px-6 border-[#818cf8]/30 bg-[#818cf8]/10 text-[#818cf8] hover:bg-[#818cf8]/20 hover:shadow-[0_0_20px_rgba(99,102,241,0.25)] active:scale-[0.97] transition-all duration-300 cursor-pointer"
         >
-          <Play className="size-4" />
+          <Play className="size-5" />
           Start
         </Button>
       )}
@@ -44,9 +44,9 @@ export function Controls({
         variant="ghost"
         size="lg"
         onClick={onReset}
-        className="gap-2 text-muted-foreground hover:text-foreground transition-all duration-300 cursor-pointer"
+        className="gap-2 h-12 px-6 text-muted-foreground hover:text-foreground active:scale-[0.97] transition-all duration-300 cursor-pointer"
       >
-        <RotateCcw className="size-4" />
+        <RotateCcw className="size-5" />
         Reset
       </Button>
     </div>
