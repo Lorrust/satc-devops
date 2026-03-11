@@ -159,7 +159,7 @@ export default function Home() {
 
       {/* Session counter */}
       <div className="mb-12">
-        <SessionCounter count={sessionCount} />
+        <SessionCounter count={sessionCount} sessionType={sessionType} />
       </div>
 
       {/* Keyboard hint */}
