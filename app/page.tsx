@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { Timer } from "@/app/components/Timer";
 import { Controls } from "@/app/components/Controls";
 import { SessionCounter } from "@/app/components/SessionCounter";
+import { Particles } from "@/app/components/Particles";
 import {
   FOCUS_DURATION,
   getDuration,
@@ -122,6 +123,9 @@ export default function Home() {
           }}
         />
       </div>
+
+      {/* Floating particles */}
+      <Particles sessionType={sessionType} />
 
       {/* Header — subdued, top area */}
       <header className="flex flex-col items-center gap-1 mb-6">

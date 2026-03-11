@@ -124,6 +124,24 @@
   }
 }
 
+/* Ambient particles: single continuous drift — visual properties */
+@keyframes particle-drift {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(var(--drift));
+    opacity: 0;
+  }
+}
+
 .animate-pulse-glow {
   animation: pulse-glow 1.5s ease-in-out 3;
 }
