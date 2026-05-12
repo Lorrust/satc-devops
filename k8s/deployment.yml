@@ -24,7 +24,7 @@ spec:
       - name: app-satc
         image: docker.io/##DOCKER_USERNAME##/satc-devops:##K8S_TAG##
         ports:
-        - containerPort: 4173
+        - containerPort: 4278
           name: http
 ---
 apiVersion: v1
@@ -40,7 +40,7 @@ spec:
     app: app-satc
   ports:
   - port: 80
-    targetPort: 4173
+    targetPort: 4278
     name: http
     protocol: TCP
 ---
